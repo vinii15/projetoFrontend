@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Paciente | Saúde Integral</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="conteiner">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <div class="acoes-cabecalho">
+                <div class="menu-usuario">
+                    <div class="info-usuario">
+                        <div class="avatar-usuario" id="avatarPaciente">JP</div>
+                        <span class="nome-usuario" id="nomePaciente">João Pedro</span>
+                    </div>
+                    <button class="botao-sair" onclick="mostrarModalSair()">
+                        Sair
+                    </button>
+                </div>
+            </div>
+        </header>
+
+      
+        <section class="secao-boas-vindas">
+            <h2>Olá, <span id="saudacaoNome">João</span>!</h2>
+            <p>Bem-vindo à sua área do paciente</p>
+        </section>
+
+      
+        <section class="grade-estatisticas">
+           
+            <div class="cartao-estatistica" onclick="verProximaConsulta()">
+                <div class="cabecalho-estatistica">
+                    <h3>Próxima Consulta</h3>
+                    <span class="etiqueta-status agendada">Agendada</span>
+                </div>
+                <div class="numero-estatistica" id="dataProximaConsulta">15/12</div>
+                <p class="periodo-estatistica" id="horaProximaConsulta">14:30h</p>
+            </div>
+
+          
+            <div class="cartao-estatistica" onclick="window.location.href='historicoPaciente.html'">
+                <div class="cabecalho-estatistica">
+                    <h3>Consultas Realizadas</h3>
+                </div>
+                <div class="numero-estatistica">24</div>
+                <p class="periodo-estatistica">este ano</p>
+            </div>
+
+            <div class="cartao-estatistica" onclick="window.location.href='resultadoConsulta.html'">
+                <div class="cabecalho-estatistica">
+                    <h3>Exames Pendentes</h3>
+                </div>
+                <div class="numero-estatistica">3</div>
+                <p class="periodo-estatistica">resultados</p>
+            </div>
+        </section>
+
+        <div class="conteudo-principal">
+           
+            <div class="coluna-conteudo">
+               
+                <section class="cartao-informacao">
+                    <h3>Meus Dados Pessoais</h3>
+                    <p>Gerencie suas informações pessoais e de contato</p>
+                    <div class="acoes-documentos">
+                       
+                        <button class="botao-documento" onclick="atualizarDados()">
+                            <span class="icone-botao">✏️</span>
+                          <a href="dadosPessoais.html" class="linkDados"> Atualizar Dados</a> 
+                        </button>
+                    </div>
+                </section>
+
+             
+                <section class="cartao-informacao destaque">
+                    <h3>Meu Histórico Médico</h3>
+                    <p>Acesse seu histórico de consultas e tratamentos</p>
+                    <div class="acoes-documentos">
+                        <a href="historicoPaciente.html" class="botao-documento">
+                            <span class="icone-botao">📋</span>
+                            Histórico e Prontuario de Consultas
+                        </a>
+                        
+                        <a href="exames.html" class="botao-documento">
+                            <span class="icone-botao">💉</span>
+                            Resultados de Exames
+                        </a>
+                    </div>
+                </section>
+
+          
+                <section class="cartao-informacao">
+                    <div class="cabecalho-cartao">
+                        <h3>Meus Lembretes</h3>
+                        <span class="etiqueta" id="totalLembretes">4 lembretes</span>
+                    </div>
+                    <div class="lista-lembretes" id="lista-lembretes">
+                       
+                        <div class="item-lembrete urgente">
+                            <span class="icone-botao">⏰</span>
+                            <div class="conteudo-lembrete">
+                                <strong>Consulta com Cardiologista</strong>
+                                <small>Amanhã, 15/12 às 14:30h</small>
+                                <span class="tipo-lembrete">Consulta</span>
+                            </div>
+                        </div>
+                        
+                        <div class="item-lembrete">
+                            <span class="icone-botao">💊</span>
+                            <div class="conteudo-lembrete">
+                                <strong>Tomar medicamento - Lisinopril</strong>
+                                <small>Hoje às 21:00h</small>
+                                <span class="tipo-lembrete">Medicamento</span>
+                            </div>
+                        </div>
+                        
+                        <div class="item-lembrete">
+                            <span class="icone-botao">🩺</span>
+                            <div class="conteudo-lembrete">
+                                <strong>Retirar resultado de exame</strong>
+                                <small>18/12 às 08:00h</small>
+                                <span class="tipo-lembrete">Exame</span>
+                            </div>
+                        </div>
+                        
+                        <div class="item-lembrete">
+                            <span class="icone-botao">💉</span>
+                            <div class="conteudo-lembrete">
+                                <strong>Aplicar insulina</strong>
+                                <small>Diariamente às 20:00h</small>
+                                <span class="tipo-lembrete">Tratamento</span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </section>
+            </div>
+
+            
+            <div class="coluna-conteudo">
+              
+                <section class="cartao-informacao">
+                    <h3>Agendar Consulta</h3>
+                    <p>Agende sua consulta presencial ou remota</p>
+                    <div class="opcoes-agendamento">
+                        <a href="consulta.html?tipo=presencial" class="botao-agendamento presencial">
+                            <span class="icone-botao">🏢</span>
+                            Consulta Presencial
+                        </a>
+                       
+                    </div>
+                </section>
+
+              
+                <section class="cartao-informacao">
+                    <div class="cabecalho-cartao">
+                        <h3>Minhas Consultas Agendadas</h3>
+                        <span class="etiqueta" id="totalConsultas">2 consultas</span>
+                    </div>
+                    <div class="lista-consultas" id="lista-consultas">
+                       
+                    </div>
+                    <a href="resultadoConsulta.html" class="botao-cartao">
+                        Ver Todas as Consultas →
+                    </a>
+                </section>
+
+              
+                <section class="cartao-informacao destaque">
+                    <h3>Teleconsultas</h3>
+                    <p>Participe de consultas por vídeo</p>
+                    <div class="acoes-video">
+
+                      
+                            
+                      
+
+
+
+
+                        <button class="botao-video entrar" onclick="entrarTeleconsulta()">
+                            <span class="icone-botao">🎥</span>
+                           <a href="consulta.html?tipo=remota" class="linkTel"> Entrar na Teleconsulta  </a>
+                        </button>
+
+
+
+
+
+
+                        <button class="botao-video testar" onclick="testarConexao()">
+                            <span class="icone-botao">🔧</span>
+                            Testar Conexão
+                        </button>
+                    </div>
+                </section> 
+            </div>
+        </div>
+
+     
+        <div id="modalSair" class="modal">
+            <div class="conteudo-modal">
+                <h3>Confirmar Saída</h3>
+                <p>Tem certeza que deseja sair da sua conta?</p>
+                <div class="botoes-modal">
+                    <button class="botao-cancelar" onclick="fecharModalSair()">Cancelar</button>
+                    <button class="botao-confirmar" onclick="confirmarSaida()">Sair</button>
+                </div>
+            </div>
+        </div>
+
+      
+        <div id="modalCancelamento" class="modal">
+            <div class="conteudo-modal">
+                <h3>Cancelar Consulta</h3>
+                <div class="info-consulta" id="infoCancelamento">
+                 
+                </div>
+                <textarea id="motivoCancelamento" placeholder="Motivo do cancelamento (opcional)" class="entrada-formulario"></textarea>
+                <div class="botoes-modal">
+                    <button class="botao-cancelar" onclick="fecharModalCancelamento()">Voltar</button>
+                    <button class="botao-confirmar" onclick="confirmarCancelamento()">Confirmar Cancelamento</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="modalDetalhesLembrete" class="modal">
+            <div class="conteudo-modal">
+                <h3 id="tituloLembrete">Detalhes do Lembrete</h3>
+                <div class="detalhes-lembrete" id="detalhesLembrete">
+                   
+                </div>
+                <div class="botoes-modal">
+                    <button class="botao-cancelar" onclick="fecharModalDetalhesLembrete()">Fechar</button>
+                    <button class="botao-confirmar" onclick="marcarComoLido()">Marcar como Lido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="paciente.js"></script>
+</body>
+</html>

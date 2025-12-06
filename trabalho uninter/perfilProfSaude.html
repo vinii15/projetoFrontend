@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Profissional | Vidaplus</title>
+    <link rel="stylesheet" href="profissionalSaude.css">
+</head>
+<body>
+    <div class="container">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <div class="acoes-cabecalho">
+                <div class="menu-usuario">
+                    <div class="info-usuario">
+                        <div class="avatar-usuario">D</div>
+                        <span class="nome-usuario">Dra. Maria Silva</span>
+                    </div>
+                    <button class="btn-sair" onclick="mostrarModalSair()">
+                        Sair
+                    </button>
+                </div>
+            </div>
+        </header>
+
+      
+        <section class="secao-boas-vindas">
+            <h2>Olá, Dra. Maria!</h2>
+            <p>Bem-vinda ao seu painel profissional</p>
+        </section>
+
+        
+        <section class="grid-estatisticas">
+           
+            <div class="cartao-estatistica">
+                <div class="cabecalho-estatistica">
+                    <h3>Consultas Hoje</h3>
+                </div>
+                <div class="numero-estatistica">8</div>
+                <p class="periodo-estatistica">próximas horas</p>
+            </div>
+
+          
+            <div class="cartao-estatistica">
+                <div class="cabecalho-estatistica">
+                    <h3>Pacientes Atendidos</h3>
+                </div>
+                <div class="numero-estatistica">142</div>
+                <p class="periodo-estatistica">este mês</p>
+            </div>
+
+            
+            <div class="cartao-estatistica">
+                <div class="cabecalho-estatistica">
+                    <h3>Teleconsultas</h3>
+                </div>
+                <div class="numero-estatistica">15</div>
+                <p class="periodo-estatistica">este mês</p>
+            </div>
+        </section>
+
+        
+        <div class="conteudo-principal">
+            
+            <div class="coluna-conteudo">
+                <section class="cartao-informacao">
+                    <div class="cabecalho-cartao">
+                        <h3>Agenda de Hoje</h3>
+                        <span class="selo" id="totalConsultas">4 consultas</span>
+                    </div>
+                    <div class="lista-consultas" id="agendaHoje">
+                        
+                    </div>
+                </section>
+
+               
+                <section class="cartao-informacao">
+                    <h3>Atualização de Prontuários</h3>
+                    <p>Acesse e atualize os prontuários dos seus pacientes</p>
+                    <div class="caixa-busca">
+                        <input type="text" id="buscarPaciente" placeholder="Buscar paciente..." onkeyup="filtrarPacientes()">
+                        <button class="btn-busca" onclick="buscarPaciente()">🔍</button>
+                    </div>
+                    <button class="btn-cartao" onclick="gerenciarProntuarios()">
+                       <a href="prontuario.html" class="pront_link">Gerenciar Prontuários →</a> 
+                    </button>
+                </section>
+            </div>
+
+           
+            <div class="coluna-conteudo">
+                
+                <section class="cartao-informacao destacado">
+                    <h3>Documentos Médicos</h3>
+                    <p>Emita receitas digitais e encaminhamentos médicos</p>
+                    <div class="acoes-documento">
+                        <button class="btn-documento" onclick="emitirReceita()">
+                            <span class="icone-btn">📄</span>
+                            <a href="receita.html" class="link-rec-enc">Receita Digital</a>
+                        </button>
+                        <button class="btn-documento" onclick="emitirEncaminhamento()">
+                            <span class="icone-btn">📋</span>
+                            <a href="encaminhamento.html" class="link-rec-enc">Encaminhamento</a>
+                        </button>
+                    </div>
+                </section>
+
+               
+                <section class="cartao-informacao">
+                    <div class="cabecalho-cartao">
+                        <h3>Histórico de Pacientes</h3>
+                        <span class="selo" id="totalPacientes">4 pacientes</span>
+                    </div>
+                    <p>Consulte o histórico clínico completo dos pacientes</p>
+                    <div class="pacientes-recentes" id="listaPacientes">
+                       
+                    </div>
+                    <button class="btn-cartao" onclick="buscarPacienteCompleto()">
+                      <a href="historicoMedPacientes.html" class="link-busca"> Buscar Paciente →</a> 
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="modalSair" class="modal">
+        <div class="conteudo-modal">
+            <h3>Confirmar Saída</h3>
+            <p>Tem certeza que deseja sair do sistema?</p>
+            <div class="botoes-modal">
+                <button class="btn-cancelar" onclick="fecharModalSair()">Cancelar</button>
+                <button class="btn-confirmar" onclick="confirmarSaida()">Sair</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modalDetalhesConsulta" class="modal">
+        <div class="conteudo-modal">
+            <h3>Detalhes da Consulta</h3>
+            <div class="info-consulta" id="detalhesConsulta">
+               
+            </div>
+            <div class="botoes-modal">
+                <button class="btn-cancelar" onclick="fecharModalDetalhes()">Fechar</button>
+                <button class="btn-confirmar" onclick="iniciarConsulta()">Iniciar Consulta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="profissionalSaude.js"></script>
+</body>
+</html>

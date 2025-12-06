@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(140deg, #25a6fc 15%, #25d5fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.conteiner {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    height: 700px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-top: 20px;
+    color:#5e98fc;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.vida {
+    color: rgb(255, 0, 0);
+}
+
+.subtitulo {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.formulario-cadastro {
+    margin-top: 50px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha-formulario {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.grupo-formulario {
+    flex: 1;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.2);
+}
+
+.divisor {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.divisor::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: white;
+}
+
+.botao-confirmar {
+    background:  #5e98fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: lowercase;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.link-cadastro {
+    text-decoration: none;
+    color: white;
+    padding: 10px 90px;
+}
+
+.botao-confirmar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteiner {
+        width: 95%;
+        max-width: 95%;
+        height: auto;
+        min-height: 700px;
+        padding: 30px 20px;
+    }
+    
+    .linha-formulario {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteiner {
+        padding: 20px 15px;
+        min-height: 650px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .subtitulo {
+        font-size: 16px;
+    }
+    
+    .grupo-formulario input {
+        padding: 10px;
+    }
+    
+    .link-cadastro {
+        padding: 10px 50px;
+    }
+}

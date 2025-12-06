@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Consultas | Vidaplus</title>
+    <link rel="stylesheet" href="resultadoConsulta.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <nav class="navegacao">
+                <a href="perfil.html" class="link-navegacao">Meu Perfil</a>
+                <a href="consulta.html" class="link-navegacao">Agendar Consulta</a>
+                <a href="exames.html" class="link-navegacao">Exames</a>
+            </nav>
+        </header>
+
+    
+        <section class="titulo-pagina">
+            <h2>Minhas Consultas</h2>
+            <p>Acompanhe suas consultas agendadas</p>
+        </section>
+
+        
+        <div class="secao-filtros">
+            <div class="grupo-filtro">
+                <label for="filtro-status">Filtrar por status:</label>
+                <select id="filtro-status">
+                    <option value="todas">Todas as consultas</option>
+                    <option value="agendada">Agendadas</option>
+                    <option value="realizada">Realizadas</option>
+                    <option value="cancelada">Canceladas</option>
+                </select>
+            </div>
+            <div class="caixa-busca">
+                <input type="text" id="buscar-consultas" placeholder="Buscar por médico ou especialidade...">
+                <button class="btn-busca">🔍</button>
+            </div>
+        </div>
+
+       
+        <div class="lista-consultas" id="lista-consultas">
+           
+        </div>
+
+      
+    </div>
+
+   
+    <div id="modal-cancelamento" class="modal">
+        <div class="conteudo-modal">
+            <h3>Cancelar Consulta</h3>
+            <p id="texto-modal-cancelamento">Tem certeza que deseja cancelar esta consulta?</p>
+            <div class="acoes-modal">
+                <button class="btn-secundario">Manter Consulta</button>
+                <button class="btn-confirmar-cancelamento">Sim, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modal-detalhes" class="modal">
+        <div class="conteudo-modal">
+            <h3>Detalhes da Consulta</h3>
+            <div class="detalhes-consulta" id="detalhes-consulta">
+               
+            </div>
+            <div class="acoes-modal">
+                <button class="btn-primario">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="resultadoConsulta.js"></script>
+</body>
+</html>

@@ -1,0 +1,693 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 1000px; 
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5e98fc;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo-icone {
+    font-size: 24px;
+}
+
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #5e98fc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nome-usuario {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.navegacao-rastro {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.navegacao-rastro a {
+    color: #5e98fc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navegacao-rastro a:hover {
+    text-decoration: underline;
+}
+
+.navegacao-rastro span {
+    color: #999;
+}
+
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-pagina h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+.formulario-documento {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+
+.cabecalho-formulario {
+    background-color: #f0f7ff;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-formulario h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn-contorno,
+.btn-imprimir,
+.btn-primario,
+.btn-secundario,
+.btn-busca {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-contorno,
+.btn-imprimir {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.btn-contorno:hover,
+.btn-imprimir:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icone {
+    font-size: 16px;
+}
+
+
+.conteudo-formulario {
+    padding: 30px;
+}
+
+
+.info-paciente,
+.formulario-prescricao,
+.info-medico {
+    margin-bottom: 30px;
+}
+
+.info-paciente h4,
+.formulario-prescricao h4,
+.info-medico h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5e98fc;
+}
+
+
+.buscar-paciente {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.buscar-paciente input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.buscar-paciente input:focus {
+    border-color: #5e98fc;
+}
+
+.btn-busca {
+    background: #5e98fc;
+    color: white;
+    border: 1px solid #5e98fc;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 20px;
+}
+
+.btn-busca:hover {
+    background: #4d87ea;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+
+.resultados-paciente {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.item-resultado-paciente {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.item-resultado-paciente:hover {
+    background-color: #f5f5f5;
+}
+
+.item-resultado-paciente:last-child {
+    border-bottom: none;
+}
+
+.detalhes-paciente {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #eee;
+    min-height: 100px;
+}
+
+.nenhum-paciente {
+    color: #888;
+    text-align: center;
+    font-style: italic;
+    padding: 30px 0;
+}
+
+.paciente-selecionado {
+    color: #666;
+    font-size: 14px;
+}
+
+.paciente-selecionado strong {
+    color: #333;
+    font-weight: 600;
+}
+
+
+.lista-medicamentos {
+    margin-bottom: 25px;
+}
+
+.item-medicamento {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #5e98fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-medicamento:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-medicamento {
+    flex: 1;
+}
+
+.nome-medicamento {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.detalhes-medicamento {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+.acoes-medicamento {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-remover {
+    padding: 8px 15px;
+    background: white;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-remover:hover {
+    background-color: #fff5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
+}
+
+
+.adicionar-medicamento-form {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.adicionar-medicamento-form h5 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: #5e98fc;
+}
+
+.grupo-formulario textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.linha-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.detalhes-medico {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #5e98fc;
+    margin-bottom: 20px;
+}
+
+.detalhes-medico p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.detalhes-medico strong {
+    color: #333;
+    font-weight: 600;
+}
+
+
+.acoes-formulario {
+    background-color: #f0f7ff;
+    padding: 25px 30px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-primario {
+    background: #5e98fc;
+    color: white;
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.btn-secundario {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.btn-secundario:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+    transform: translateY(-2px);
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-modal {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: aparecerModal 0.3s ease-out;
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.conteudo-modal h3 {
+    color: #5e98fc;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.conteudo-modal p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.acoes-modal {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.grupo-formulario input:invalid,
+.grupo-formulario select:invalid,
+.grupo-formulario textarea:invalid {
+    border-color: #e74c3c;
+}
+
+.grupo-formulario input:valid:focus,
+.grupo-formulario select:valid:focus,
+.grupo-formulario textarea:valid:focus {
+    border-color: #27ae60;
+}
+
+
+.btn-primario:disabled,
+.btn-secundario:disabled,
+.btn-contorno:disabled,
+.btn-imprimir:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+
+@media (max-width: 1040px) {
+    .container {
+        width: 95%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 95%;
+        padding: 25px 20px;
+    }
+    
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .cabecalho-formulario {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+    
+    .acoes-cabecalho {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .linha-formulario {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .item-medicamento {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .acoes-medicamento {
+        align-self: flex-end;
+    }
+    
+    .acoes-formulario {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .acoes-modal {
+        flex-direction: column;
+    }
+    
+    .conteudo-modal {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .titulo-pagina h2 {
+        font-size: 24px;
+    }
+    
+    .conteudo-formulario {
+        padding: 20px 15px;
+    }
+    
+    .cabecalho-formulario,
+    .acoes-formulario {
+        padding: 20px;
+    }
+}
+
+
+#lista-medicamentos-datalist {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item-medicamento {
+    animation: slideIn 0.3s ease-out;
+}
+
+
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+:-ms-input-placeholder {
+    color: #aaa;
+}

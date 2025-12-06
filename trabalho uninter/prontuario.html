@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuário | Vidaplus</title>
+    <link rel="stylesheet" href="prontuario.css">
+</head>
+<body>
+    <div class="container">
+      
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <div class="avatar-usuario">D</div>
+                    <span class="nome-usuario">Dra. Maria Silva</span>
+                </div>
+            </div>
+        </header>
+
+          <nav class="navegacao-rastro">
+            <a href="perfilProfSaude.html">Painel Principal</a> &gt; 
+            <span>Prontuário</span>
+        </nav>
+
+      
+        <section class="cabecalho-paciente">
+            <div class="info-basica-paciente">
+                <div class="avatar-paciente">J</div>
+                <div class="detalhes-paciente">
+                    <h2>João Santos</h2>
+                    <div class="meta-paciente">
+                        <span><strong>Idade:</strong> 39 anos</span>
+                        <span><strong>Nascimento:</strong> 15/03/1985</span>
+                        <span><strong>CPF:</strong> 123.456.789-00</span>
+                        <span><strong>Convênio:</strong> Unimed</span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+       
+        <nav class="abas">
+            <button class="btn-aba ativo" data-aba="dados-pessoais">Dados Pessoais</button>
+            <button class="btn-aba" data-aba="historico">Histórico Médico</button>
+            <button class="btn-aba" data-aba="consultas">Consultas</button>
+            <button class="btn-aba" data-aba="exames">Exames</button>
+            <button class="btn-aba" data-aba="receitas">Receitas</button>
+        </nav>
+
+       
+        <div class="conteudo-abas">
+           
+            <div class="painel-aba ativo" id="dados-pessoais">
+                <div class="grid-informacoes">
+                    <div class="cartao-informacao">
+                        <h3>Informações Pessoais</h3>
+                        <div class="item-informacao">
+                            <label>Nome Completo:</label>
+                            <span>João da Silva Santos</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Data de Nascimento:</label>
+                            <span>15/03/1985 (39 anos)</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>CPF:</label>
+                            <span>123.456.789-00</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>RG:</label>
+                            <span>12.345.678-9</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Estado Civil:</label>
+                            <span>Casado</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Profissão:</label>
+                            <span>Engenheiro</span>
+                        </div>
+                    </div>
+
+                    <div class="cartao-informacao">
+                        <h3>Contato</h3>
+                        <div class="item-informacao">
+                            <label>Telefone:</label>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>E-mail:</label>
+                            <span>joao.santos@email.com</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Endereço:</label>
+                            <span>Rua das Flores, 123 - Centro, São Paulo/SP - CEP: 01234-567</span>
+                        </div>
+                    </div>
+
+                    <div class="cartao-informacao">
+                        <h3>Convênio e Emergência</h3>
+                        <div class="item-informacao">
+                            <label>Convênio:</label>
+                            <span>Unimed</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Número da Carteira:</label>
+                            <span>UM123456789</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Contato de Emergência:</label>
+                            <span>Maria Santos (Esposa) - (11) 98888-8888</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="painel-aba" id="historico">
+                <div class="grid-informacoes">
+                    <div class="cartao-informacao">
+                        <h3>Antecedentes Pessoais</h3>
+                        <div class="item-informacao">
+                            <label>Hipertensão Arterial:</label>
+                            <span class="status-sim">Sim (desde 2018)</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Diabetes:</label>
+                            <span class="status-nao">Não</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Alergias:</label>
+                            <span>Penicilina (reação cutânea)</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Cirurgias Prévia:</label>
+                            <span>Apêndice (2010)</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Medicações em Uso:</label>
+                            <span>Losartana 50mg - 1x/dia</span>
+                        </div>
+                    </div>
+
+                    <div class="cartao-informacao">
+                        <h3>Antecedentes Familiares</h3>
+                        <div class="item-informacao">
+                            <label>Pai:</label>
+                            <span>Hipertensão, Infarto aos 65 anos</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Mãe:</label>
+                            <span>Diabetes tipo 2</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Irmãos:</label>
+                            <span>Nenhuma condição relevante</span>
+                        </div>
+                    </div>
+
+                    <div class="cartao-informacao">
+                        <h3>Hábitos de Vida</h3>
+                        <div class="item-informacao">
+                            <label>Tabagismo:</label>
+                            <span class="status-nao">Não fuma</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Etilismo:</label>
+                            <span>Social (fins de semana)</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Atividade Física:</label>
+                            <span>Caminhada 3x/semana</span>
+                        </div>
+                        <div class="item-informacao">
+                            <label>Alimentação:</label>
+                            <span>Balanceada com restrição de sal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="painel-aba" id="consultas">
+                <div class="lista-consultas">
+                    <div class="item-consulta">
+                        <div class="cabecalho-consulta">
+                            <h4>Consulta de Rotina</h4>
+                            <span class="data-consulta">15/04/2024 - 09:00</span>
+                        </div>
+                        <div class="detalhes-consulta">
+                            <div class="info-consulta">
+                                <p><strong>Médico:</strong> Dra. Maria Silva</p>
+                                <p><strong>Motivo:</strong> Acompanhamento de hipertensão</p>
+                            </div>
+                            <div class="anotacoes-consulta">
+                                <p><strong>Anotações:</strong> Paciente relata estar bem, sem queixas. PA: 130x80 mmHg. Manter Losartana 50mg.</p>
+                            </div>
+                            <button class="btn-visualizar">Ver Detalhes</button>
+                        </div>
+                    </div>
+
+                    <div class="item-consulta">
+                        <div class="cabecalho-consulta">
+                            <h4>Retorno</h4>
+                            <span class="data-consulta">10/03/2024 - 14:30</span>
+                        </div>
+                        <div class="detalhes-consulta">
+                            <div class="info-consulta">
+                                <p><strong>Médico:</strong> Dra. Maria Silva</p>
+                                <p><strong>Motivo:</strong> Verificação de pressão arterial</p>
+                            </div>
+                            <div class="anotacoes-consulta">
+                                <p><strong>Anotações:</strong> Paciente com queixa de cefaleia ocasional. PA: 140x85 mmHg. Orientado sobre hábitos de vida.</p>
+                            </div>
+                            <button class="btn-visualizar">Ver Detalhes</button>
+                        </div>
+                    </div>
+
+                    <div class="item-consulta">
+                        <div class="cabecalho-consulta">
+                            <h4>Consulta Inicial</h4>
+                            <span class="data-consulta">05/02/2024 - 10:00</span>
+                        </div>
+                        <div class="detalhes-consulta">
+                            <div class="info-consulta">
+                                <p><strong>Médico:</strong> Dra. Maria Silva</p>
+                                <p><strong>Motivo:</strong> Check-up anual</p>
+                            </div>
+                            <div class="anotacoes-consulta">
+                                <p><strong>Anotações:</strong> Primeira consulta. Histórico de hipertensão familiar. Exames solicitados.</p>
+                            </div>
+                            <button class="btn-visualizar">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="painel-aba" id="exames">
+                <div class="grid-exames">
+                    <div class="cartao-exame">
+                        <div class="cabecalho-exame">
+                            <h4>Hemograma Completo</h4>
+                            <span class="data-exame">20/03/2024</span>
+                        </div>
+                        <div class="status-exame status-realizado">
+                            Realizado
+                        </div>
+                        <div class="resultado-exame">
+                            <p><strong>Resultado:</strong> Dentro dos parâmetros normais</p>
+                        </div>
+                        <button class="btn-visualizar">Ver Exame</button>
+                    </div>
+
+                    <div class="cartao-exame">
+                        <div class="cabecalho-exame">
+                            <h4>Colesterol Total e Frações</h4>
+                            <span class="data-exame">20/03/2024</span>
+                        </div>
+                        <div class="status-exame status-realizado">
+                            Realizado
+                        </div>
+                        <div class="resultado-exame">
+                            <p><strong>Resultado:</strong> Colesterol LDL: 110 mg/dL (limítrofe)</p>
+                        </div>
+                        <button class="btn-visualizar">Ver Exame</button>
+                    </div>
+
+                    <div class="cartao-exame">
+                        <div class="cabecalho-exame">
+                            <h4>Eletrocardiograma</h4>
+                            <span class="data-exame">15/04/2024</span>
+                        </div>
+                        <div class="status-exame status-agendado">
+                            Agendado
+                        </div>
+                        <div class="resultado-exame">
+                            <p><strong>Agendado para:</strong> 25/04/2024 - 08:00</p>
+                        </div>
+                        <button class="btn-visualizar">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="painel-aba" id="receitas">
+                <div class="lista-receitas">
+                    <div class="cartao-receita">
+                        <div class="cabecalho-receita">
+                            <h4>Losartana 50mg</h4>
+                            <span class="data-receita">15/04/2024</span>
+                        </div>
+                        <div class="detalhes-receita">
+                            <p><strong>Posologia:</strong> 1 comprimido ao dia</p>
+                            <p><strong>Duração:</strong> 30 dias</p>
+                            <p><strong>Uso:</strong> Contínuo</p>
+                        </div>
+                        <div class="status-receita status-ativa">
+                            Ativa
+                        </div>
+                        <button class="btn-visualizar">Ver Receita</button>
+                    </div>
+
+                    <div class="cartao-receita">
+                        <div class="cabecalho-receita">
+                            <h4>Dipirona 500mg</h4>
+                            <span class="data-receita">10/03/2024</span>
+                        </div>
+                        <div class="detalhes-receita">
+                            <p><strong>Posologia:</strong> 1 comprimido a cada 6 horas (se necessário)</p>
+                            <p><strong>Duração:</strong> 10 dias</p>
+                            <p><strong>Uso:</strong> SOS para dor</p>
+                        </div>
+                        <div class="status-receita status-finalizada">
+                            Finalizada
+                        </div>
+                        <button class="btn-visualizar">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="prontuario.js"></script>
+</body>
+</html>

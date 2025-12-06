@@ -1,0 +1,606 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.conteiner {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5e98fc;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.icone-logo {
+    font-size: 24px;
+}
+
+
+.navegacao {
+    display: flex;
+    gap: 25px;
+}
+
+.link-navegacao {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.link-navegacao:hover {
+    color: #2575fc;
+    background-color: rgba(37, 117, 252, 0.05);
+}
+
+
+
+
+
+.titulo-pagina {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.titulo-pagina h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+.lista-exames {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.cartao-exame {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-exame:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.cabecalho-exame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.cabecalho-exame h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.status-exame {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-exame.disponivel {
+    background-color: #e8f6f3;
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.status-exame.agendado {
+    background-color: #fff3e0;
+    color: #f39c12;
+    border: 1px solid #f39c12;
+}
+
+.status-exame.aguardando {
+    background-color: #e0f7ff;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+
+.informacao-exame {
+    margin-bottom: 20px;
+}
+
+.informacao-exame p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.informacao-exame strong {
+    color: #444;
+    font-weight: 500;
+}
+
+
+.resultados-exame {
+    margin-bottom: 20px;
+}
+
+.resultados-exame h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+.item-resultado {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #5e98fc;
+}
+
+.item-resultado.normal {
+    border-left-color: #27ae60;
+}
+
+.item-resultado.alerta {
+    border-left-color: #f39c12;
+}
+
+.cabecalho-resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.nome-resultado {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.valor-resultado {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.faixa-referencia,
+.descricao-resultado {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.observacao-resultado {
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #fff5f5;
+    border-radius: 6px;
+    border-left: 3px solid #e74c3c;
+}
+
+
+.interpretacao-exame {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #5e98fc;
+}
+
+.interpretacao-exame h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.interpretacao-exame p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.instrucoes-exame {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.instrucoes-exame h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.instrucoes-exame ul {
+    list-style-type: none;
+}
+
+.instrucoes-exame li {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.instrucoes-exame li:before {
+    content: "•";
+    color: #5e98fc;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+
+.progresso-exame {
+    margin-bottom: 20px;
+}
+
+.progresso-exame h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.etapas-progresso {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.etapas-progresso:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.numero-etapa {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    color: #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.etapa.concluida .numero-etapa {
+    background-color: #27ae60;
+    color: white;
+}
+
+.etapa.atual .numero-etapa {
+    background-color: #5e98fc;
+    color: white;
+    animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgba(94, 152, 252, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(94, 152, 252, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(94, 152, 252, 0);
+    }
+}
+
+.nome-etapa {
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.data-etapa {
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.acoes-exame {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+.botao-ver,
+.botao-download,
+.botao-compartilhar,
+.botao-secundario,
+.botao-cancelar {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border: none;
+}
+
+.botao-ver {
+    background: #5e98fc;
+    color: white;
+}
+
+.botao-ver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.botao-download {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.botao-download:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+}
+
+.botao-compartilhar {
+    background: #27ae60;
+    color: white;
+}
+
+.botao-compartilhar:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.botao-secundario {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.botao-secundario:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+}
+
+.botao-cancelar {
+    background: white;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.botao-cancelar:hover {
+    background-color: #fff5f5;
+    border-color: #c0392b;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-modal {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.conteudo-modal h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #5e98fc;
+}
+
+.conteudo-modal p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.acoes-modal {
+    display: flex;
+    gap: 15px;
+}
+
+.botao-confirmar-cancelar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 1;
+}
+
+.botao-confirmar-cancelar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+
+@media (max-width: 1040px) {
+    .conteiner {
+        width: 95%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        width: 95%;
+        max-width: 95%;
+        padding: 25px 20px;
+    }
+    
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .navegacao {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .cabecalho-exame {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .etapas-progresso {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .etapas-progresso:before {
+        display: none;
+    }
+    
+    .acoes-exame {
+        flex-direction: column;
+    }
+    
+    .acoes-modal {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .conteiner {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .titulo-pagina h2 {
+        font-size: 24px;
+    }
+    
+    .cartao-exame {
+        padding: 20px 15px;
+    }
+    
+    .conteudo-modal {
+        padding: 25px 20px;
+    }
+}

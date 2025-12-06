@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pacientes | Vidaplus</title>
+    <link rel="stylesheet" href="historicoMedPacientes.css">
+</head>
+<body>
+    <div class="container">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <div class="avatar-usuario">D</div>
+                    <span class="nome-usuario">Dra. Maria Silva</span>
+                </div>
+            </div>
+        </header>
+
+        
+        <nav class="navegacao-rastro">
+            <a href="perfilProfSaude.html">Painel Principal</a> &gt; 
+            <a href="historicoPacientes.html" class="link-ativo">Histórico de Pacientes</a>
+        </nav>
+
+        
+        <section class="cabecalho-pagina">
+            <div class="conteudo-cabecalho">
+                <h2>Histórico de Pacientes</h2>
+                <p>Acompanhe o histórico médico completo dos seus pacientes</p>
+            </div>
+            <button class="btn-primario" onclick="exportarRelatorio()">
+                <span class="btn-icone">📊</span>
+                Exportar Relatório
+            </button>
+        </section>
+
+        
+        <div class="cartao-info-medico">
+            <div class="avatar-medico">D</div>
+            <div class="detalhes-medico">
+                <h3>Dra. Maria Silva</h3>
+                <div class="meta-medico">
+                    <span>CRM: 12345/SP • Clínica Geral</span>
+                    <span>Vidaplus Clínica Médica • Desde 2015</span>
+                </div>
+            </div>
+            <div class="estatisticas-medico">
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="total-pacientes">142</div>
+                    <div class="rotulo-estatistica">Pacientes Ativos</div>
+                </div>
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="consultas-hoje">8</div>
+                    <div class="rotulo-estatistica">Consultas Hoje</div>
+                </div>
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="novos-pacientes">12</div>
+                    <div class="rotulo-estatistica">Novos Este Mês</div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="secao-filtros">
+            <div class="caixa-busca">
+                <input type="text" id="search-input" placeholder="Buscar paciente por nome, CPF ou diagnóstico...">
+                <button class="btn-busca" onclick="filtrarPacientes()">🔍</button>
+            </div>
+            
+            <div class="grupo-filtro">
+                <label for="filter-period">Período:</label>
+                <select id="filter-period">
+                    <option value="all">Todo o período</option>
+                    <option value="7">Últimos 7 dias</option>
+                    <option value="30">Últimos 30 dias</option>
+                    <option value="90">Últimos 3 meses</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label for="filter-status">Status:</label>
+                <select id="filter-status">
+                    <option value="all">Todos os pacientes</option>
+                    <option value="ativo">Ativos</option>
+                    <option value="inativo">Inativos</option>
+                    <option value="alta">Com Alta</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label for="filter-convenio">Convênio:</label>
+                <select id="filter-convenio">
+                    <option value="all">Todos os convênios</option>
+                    <option value="Unimed">Unimed</option>
+                    <option value="Amil">Amil</option>
+                    <option value="Bradesco">Bradesco Saúde</option>
+                    <option value="SulAmerica">SulAmérica</option>
+                </select>
+            </div>
+        </div>
+
+       
+        <div class="linha-tempo-pacientes" id="patients-list">
+           
+        </div>
+
+        
+        <div class="estado-vazio" id="empty-state" style="display: none;">
+            <div class="icone-vazio">👥</div>
+            <h3>Nenhum paciente encontrado</h3>
+            <p>Não há pacientes que correspondam aos seus filtros de busca.</p>
+            <button class="btn-primario" onclick="limparFiltros()">Limpar Filtros</button>
+        </div>
+    </div>
+
+    
+    <div id="detailModal" class="modal">
+        <div class="conteudo-modal">
+            <h3>Prontuário do Paciente</h3>
+            <div class="detalhes-paciente-modal" id="patientDetails">
+              
+            </div>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharModal()">Fechar</button>
+                <button class="btn-primario" onclick="novaConsulta()">Nova Consulta</button>
+                <button class="btn-contorno" onclick="editarProntuario()">Editar Prontuário</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="exportModal" class="modal">
+        <div class="conteudo-modal">
+            <h3>Exportar Relatório</h3>
+            <p>Selecione o formato para exportação do relatório de pacientes:</p>
+            <div class="opcoes-exportacao">
+                <button class="opcao-exportacao" onclick="exportarPDF()">
+                    <span class="icone-exportacao">📄</span>
+                    <span>PDF Completo</span>
+                    <small>Documento formatado com todos os pacientes</small>
+                </button>
+                <button class="opcao-exportacao" onclick="exportarCSV()">
+                    <span class="icone-exportacao">📊</span>
+                    <span>Planilha CSV</span>
+                    <small>Dados para Excel</small>
+                </button>
+                <button class="opcao-exportacao" onclick="exportarAtivos()">
+                    <span class="icone-exportacao">👥</span>
+                    <span>Pacientes Ativos</span>
+                    <small>Lista de pacientes em acompanhamento</small>
+                </button>
+            </div>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharExportModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="historicoPacientes.js"></script>
+</body>
+</html>

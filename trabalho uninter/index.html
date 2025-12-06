@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Plus - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-login">
+        <h1 class="logo"><span class="vida">Vida</span> plus</h1>
+        <p class="subtitulo">Login</p>
+        
+       
+        <form onsubmit="return validarLogin()">
+            <div class="grupo-formulario">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Seu endereço de e-mail" required>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Sua senha" required>
+            </div>
+            
+            <div class="grupo-checkbox">
+                <input type="checkbox" id="acesso-facil">
+                <label for="acesso-facil">Lembrar senha?</label>
+            </div>
+
+          
+            <button type="submit" class="botao-login">
+                Confirmar login
+            </button>
+            
+            <p class="texto-cadastro">Não tem uma conta? 
+                <a href="cadastro.html" class="link-cadastro">Fazer cadastro</a>
+            </p>
+        </form>
+    </div>
+
+  
+    <script>
+        function validarLogin() {
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("password").value.trim();
+
+            if (email === "medico@gmail.com" && senha === "12345") {
+                window.location.href = "perfilProfSaude.html";
+                return false;
+            }
+
+            if (email === "paciente@gmail.com" && senha === "12345") {
+                window.location.href = "perfil.html";
+                return false;
+            }
+
+            alert("Email ou senha incorretos!");
+            return false; 
+        }
+    </script>
+
+</body>
+</html>

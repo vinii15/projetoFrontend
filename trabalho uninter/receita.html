@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita Digital | Vidaplus</title>
+    <link rel="stylesheet" href="receita.css">
+</head>
+<body>
+    <div class="container">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <div class="avatar-usuario">D</div>
+                    <span class="nome-usuario">Dra. Maria Silva</span>
+                </div>
+            </div>
+        </header>
+
+        
+        <nav class="navegacao-rastro">
+            <a href="perfilProfSaude.html">Painel Principal</a> &gt; 
+            <span>Receita Digital</span>
+        </nav>
+
+       
+        <section class="titulo-pagina">
+            <h2>Receita Digital</h2>
+            <p>Prescreva medicamentos para seus pacientes</p>
+        </section>
+
+       
+        <section class="formulario-documento">
+            <div class="cabecalho-formulario">
+                <h3>Receita Digital</h3>
+                <div class="acoes-cabecalho">
+                    <button class="btn-contorno" onclick="carregarRascunho()">
+                        <span class="btn-icone">📁</span>
+                        Carregar Rascunho
+                    </button>
+                    <button class="btn-imprimir" id="imprimir-receita" onclick="imprimirReceita()">
+                        <span class="btn-icone">🖨️</span>
+                        Imprimir
+                    </button>
+                </div>
+            </div>
+            
+            <div class="conteudo-formulario">
+                <div class="info-paciente">
+                    <h4>Dados do Paciente</h4>
+                    <div class="buscar-paciente">
+                        <input type="text" id="buscar-paciente" placeholder="Buscar paciente por nome ou CPF...">
+                        <button class="btn-busca" onclick="buscarPacientes()">🔍</button>
+                    </div>
+                    <div class="resultados-paciente" id="resultados-paciente" style="display: none;">
+                       
+                    </div>
+                    <div class="detalhes-paciente" id="detalhes-paciente">
+                        <p class="nenhum-paciente">Selecione um paciente para preencher automaticamente os dados</p>
+                    </div>
+                </div>
+
+                <div class="formulario-prescricao">
+                    <h4>Prescrição Médica</h4>
+                   
+                    <div class="lista-medicamentos" id="lista-medicamentos">
+                       
+                    </div>
+
+                   
+                    <div class="adicionar-medicamento-form">
+                        <h5>Adicionar Medicamento</h5>
+                        <div class="grupo-formulario">
+                            <label for="medicamento">Medicamento *</label>
+                            <input type="text" id="medicamento" placeholder="Nome do medicamento" list="lista-medicamentos-datalist">
+                            <datalist id="lista-medicamentos-datalist">
+                                <option value="Paracetamol">
+                                <option value="Dipirona">
+                                <option value="Ibuprofeno">
+                                <option value="Amoxicilina">
+                                <option value="Losartana">
+                                <option value="Atenolol">
+                                <option value="Sinvastatina">
+                                <option value="Omeprazol">
+                                <option value="Metformina">
+                                <option value="Insulina">
+                            </datalist>
+                        </div>
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="dosagem">Dosagem *</label>
+                                <input type="text" id="dosagem" placeholder="Ex: 500mg">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="frequencia">Frequência *</label>
+                                <input type="text" id="frequencia" placeholder="Ex: 8/8 horas">
+                            </div>
+                        </div>
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="administracao">Via de Administração *</label>
+                                <select id="administracao">
+                                    <option value="">Selecione...</option>
+                                    <option value="oral">Oral</option>
+                                    <option value="topica">Tópica</option>
+                                    <option value="inalatoria">Inalatória</option>
+                                    <option value="intramuscular">Intramuscular</option>
+                                    <option value="intravenosa">Intravenosa</option>
+                                    <option value="subcutanea">Subcutânea</option>
+                                    <option value="retal">Retal</option>
+                                    <option value="vaginal">Vaginal</option>
+                                </select>
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="duracao">Duração do Tratamento *</label>
+                                <input type="text" id="duracao" placeholder="Ex: 7 dias">
+                            </div>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="instrucoes">Instruções Adicionais</label>
+                            <textarea id="instrucoes" rows="3" placeholder="Instruções específicas para o paciente"></textarea>
+                        </div>
+                        <button class="btn-contorno" onclick="adicionarMedicamento()">
+                            <span class="btn-icone">➕</span>
+                            Adicionar Medicamento
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-medico">
+                    <h4>Dados do Médico</h4>
+                    <div class="detalhes-medico">
+                        <p><strong>Dra. Maria Silva</strong></p>
+                        <p>CRM: 12345/SP</p>
+                        <p>Especialidade: Clínica Geral</p>
+                        <p>Telefone: (11) 3456-7890</p>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="validade">Validade da Receita</label>
+                        <input type="date" id="validade" min="">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="observacoes">Observações Gerais</label>
+                        <textarea id="observacoes" rows="3" placeholder="Observações adicionais sobre o tratamento"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acoes-formulario">
+                <button class="btn-secundario" onclick="salvarRascunho()">
+                    <span class="btn-icone">💾</span>
+                    Salvar Rascunho
+                </button>
+                <button class="btn-primario" id="emitir-receita" onclick="emitirReceita()">
+                    <span class="btn-icone">📄</span>
+                    Emitir Receita
+                </button>
+            </div>
+        </section>
+
+      
+        <footer class="rodape">
+            <p>Vidaplus &copy; 2024 - Sistema de Gestão Médica</p>
+        </footer>
+    </div>
+
+   
+    <div id="modal-confirmacao" class="modal">
+        <div class="conteudo-modal">
+            <h3>Receita Emitida com Sucesso!</h3>
+            <p id="mensagem-modal">A receita digital foi emitida e está disponível para o paciente.</p>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharModal()">Nova Receita</button>
+                <button class="btn-primario" onclick="imprimirReceita()">Imprimir Receita</button>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="modal-saida" class="modal">
+        <div class="conteudo-modal">
+            <h3>Confirmar Saída</h3>
+            <p>Tem certeza que deseja sair do sistema?</p>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharModalSaida()">Cancelar</button>
+                <button class="btn-primario" onclick="confirmarSaida()">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="receita.js"></script>
+</body>
+</html>

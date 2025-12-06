@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Consultas | Vidaplus</title>
+    <link rel="stylesheet" href="historicoPaciente.css">
+</head>
+<body>
+    <div class="container">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="logo-icone">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <nav class="navegacao">
+                <a href="perfil.html" class="link-navegacao"> Meu Perfil</a>
+                <a href="resultadoConsulta.html" class="link-navegacao">Consultas</a>
+                <a href="exames.html" class="link-navegacao"> Exames</a>
+            </nav>
+        </header>
+
+     
+        <section class="cabecalho-pagina">
+            <div class="conteudo-cabecalho">
+                <h2>Meu Histórico de Consultas</h2>
+                <p>Acompanhe todo o seu histórico médico e consultas realizadas</p>
+            </div>
+        </section>
+
+       
+        <div class="cartao-info-paciente">
+            <div class="avatar-paciente">J</div>
+            <div class="detalhes-paciente">
+                <h3>João Santos</h3>
+                <div class="meta-paciente">
+                    <span>45 anos • CPF: 123.456.789-00</span>
+                    <span>Plano: Amil Saúde • Nº: 123456</span>
+                </div>
+            </div>
+            <div class="estatisticas-paciente">
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="total-consultas">0</div>
+                    <div class="rotulo-estatistica">Consultas Realizadas</div>
+                </div>
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="consultas-mes">0</div>
+                    <div class="rotulo-estatistica">Este Mês</div>
+                </div>
+                <div class="estatistica">
+                    <div class="numero-estatistica" id="proxima-consulta">1</div>
+                    <div class="rotulo-estatistica">Próximas</div>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="secao-filtros">
+            <div class="caixa-busca">
+                <input type="text" id="search-input" placeholder="Buscar por médico, especialidade ou diagnóstico..." onkeyup="filtrarConsultas()">
+                <button class="btn-busca" onclick="filtrarConsultas()">🔍</button>
+            </div>
+            
+            <div class="grupo-filtro">
+                <label for="filter-period">Período:</label>
+                <select id="filter-period" onchange="filtrarConsultas()">
+                    <option value="all">Todo o período</option>
+                    <option value="30">Últimos 30 dias</option>
+                    <option value="90">Últimos 3 meses</option>
+                    <option value="365">Último ano</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label for="filter-status">Status:</label>
+                <select id="filter-status" onchange="filtrarConsultas()">
+                    <option value="all">Todas as consultas</option>
+                    <option value="realizada">Realizadas</option>
+                    <option value="agendada">Agendadas</option>
+                    <option value="cancelada">Canceladas</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label for="filter-type">Tipo:</label>
+                <select id="filter-type" onchange="filtrarConsultas()">
+                    <option value="all">Todos os tipos</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="teleconsulta">Teleconsulta</option>
+                </select>
+            </div>
+        </div>
+
+       
+        <div class="linha-tempo-consultas" id="consultations-list">
+            
+        </div>
+
+       
+        <div class="estado-vazio" id="empty-state" style="display: none;">
+            <div class="icone-vazio">📋</div>
+            <h3>Nenhuma consulta encontrada</h3>
+            <p>Não há consultas que correspondam aos seus filtros de busca.</p>
+            <button class="btn-primario" onclick="limparFiltros()">Limpar Filtros</button>
+        </div>
+    </div>
+
+   
+    <div id="detailModal" class="modal">
+        <div class="conteudo-modal">
+            <h3>Detalhes da Consulta</h3>
+            <div class="detalhes-consulta" id="consultationDetails">
+                
+            </div>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharModal()">Fechar</button>
+                <button class="btn-primario" onclick="imprimirConsulta()">Imprimir</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="exportModal" class="modal">
+        <div class="conteudo-modal">
+            <h3>Exportar Histórico</h3>
+            <p>Selecione o formato para exportação do seu histórico médico:</p>
+            <div class="opcoes-exportacao">
+                <button class="opcao-exportacao" onclick="exportarPDF()">
+                    <span class="icone-exportacao">📄</span>
+                    <span>PDF Completo</span>
+                    <small>Documento formatado com todo histórico</small>
+                </button>
+                <button class="opcao-exportacao" onclick="exportarCSV()">
+                    <span class="icone-exportacao">📊</span>
+                    <span>Planilha CSV</span>
+                    <small>Dados para Excel</small>
+                </button>
+                <button class="opcao-exportacao" onclick="exportarReceitas()">
+                    <span class="icone-exportacao">💊</span>
+                    <span>Somente Receitas</span>
+                    <small>Lista de medicamentos</small>
+                </button>
+            </div>
+            <div class="acoes-modal">
+                <button class="btn-secundario" onclick="fecharExportModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="historicoPaciente.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Exames | Vidaplus</title>
+    <link rel="stylesheet" href="exames.css">
+</head>
+<body>
+    <div class="conteiner">
+       
+        <header class="cabecalho">
+            <div class="logo">
+                <span class="icone-logo">❤️</span>
+                <h1>Vidaplus</h1>
+            </div>
+            <nav class="navegacao">
+                <a href="perfil.html" class="link-navegacao"> Meu Perfil</a>
+                <a href="resultadoConsulta.html" class="link-navegacao">Consultas</a>
+                <a href="exames.html" class="link-navegacao ">Exames</a>
+            </nav>
+        </header>
+
+       
+        <section class="titulo-pagina">
+            <h2>Meus Exames</h2>
+            <p>Veja todos os seus exames e resultados detalhados</p>
+        </section>
+
+        
+        <div class="lista-exames">
+            
+            <div class="cartao-exame">
+                <div class="cabecalho-exame">
+                    <h3>Hemograma Completo</h3>
+                    <span class="status-exame disponivel">Disponível</span>
+                </div>
+                <div class="informacao-exame">
+                    <p><strong>Data da Coleta:</strong> 15/04/2024</p>
+                    <p><strong>Data do Resultado:</strong> 16/04/2024</p>
+                    <p><strong>Laboratório:</strong> LabVida Central</p>
+                    <p><strong>Médico Solicitante:</strong> Dra. Maria Silva</p>
+                </div>
+                
+               
+                <div class="resultados-exame">
+                    <h4>Resultados Detalhados:</h4>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Hemácias</span>
+                            <span class="valor-resultado">4.8 milhões/mm³</span>
+                        </div>
+                        <div class="faixa-referencia">Valor de referência: 4.5 - 5.9 milhões/mm³</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Hemoglobina</span>
+                            <span class="valor-resultado">14.2 g/dL</span>
+                        </div>
+                        <div class="faixa-referencia">Valor de referência: 13.0 - 17.0 g/dL</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Hematócrito</span>
+                            <span class="valor-resultado">42%</span>
+                        </div>
+                        <div class="faixa-referencia">Valor de referência: 40% - 50%</div>
+                    </div>
+                    
+                    <div class="item-resultado alerta">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Leucócitos</span>
+                            <span class="valor-resultado">12.500/mm³</span>
+                        </div>
+                        <div class="faixa-referencia">Valor de referência: 4.000 - 11.000/mm³</div>
+                        <div class="observacao-resultado">⚠️ Leucocitose discreta - Pode indicar processo infeccioso</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Plaquetas</span>
+                            <span class="valor-resultado">250.000/mm³</span>
+                        </div>
+                        <div class="faixa-referencia">Valor de referência: 150.000 - 450.000/mm³</div>
+                    </div>
+                </div>
+                
+                <div class="interpretacao-exame">
+                    <h4>Interpretação Médica:</h4>
+                    <p>Hemograma dentro dos parâmetros normais, exceto por discreta leucocitose que pode estar relacionada a processo infeccioso ou inflamatório. Recomendado acompanhamento clínico.</p>
+                </div>
+                
+                <div class="acoes-exame">
+                    <button class="botao-ver" onclick="verResultadoCompleto('hemograma')">Ver Laudo Completo</button>
+                    <button class="botao-download">Download PDF</button>
+                    <button class="botao-compartilhar">Compartilhar</button>
+                </div>
+            </div>
+
+           
+            <div class="cartao-exame">
+                <div class="cabecalho-exame">
+                    <h3>Ultrassom Abdominal Total</h3>
+                    <span class="status-exame disponivel">Disponível</span>
+                </div>
+                <div class="informacao-exame">
+                    <p><strong>Data do Exame:</strong> 10/04/2024</p>
+                    <p><strong>Data do Laudo:</strong> 11/04/2024</p>
+                    <p><strong>Clínica:</strong> Imagem Diagnóstica Avançada</p>
+                    <p><strong>Médico Radiologista:</strong> Dr. Carlos Eduardo Santos</p>
+                </div>
+                
+               
+                <div class="resultados-exame">
+                    <h4>Achados do Exame:</h4>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Fígado</span>
+                            <span class="valor-resultado">Normal</span>
+                        </div>
+                        <div class="descricao-resultado">Dimensões preservadas, ecotextura homogênea, contornos regulares. Não há evidências de lesões focais.</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Vesícula Biliar</span>
+                            <span class="valor-resultado">Normal</span>
+                        </div>
+                        <div class="descricao-resultado">Vesícula com paredes finas e regulares, sem evidências de litíase.</div>
+                    </div>
+                    
+                    <div class="item-resultado alerta">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Rins</span>
+                            <span class="valor-resultado">Cisto Simples</span>
+                        </div>
+                        <div class="descricao-resultado">Presença de cisto cortical simples no rim direito, medindo 1.8 cm, características benignas.</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Pâncreas</span>
+                            <span class="valor-resultado">Normal</span>
+                        </div>
+                        <div class="descricao-resultado">Pâncreas com dimensões e ecotextura preservadas.</div>
+                    </div>
+                    
+                    <div class="item-resultado normal">
+                        <div class="cabecalho-resultado">
+                            <span class="nome-resultado">Baço</span>
+                            <span class="valor-resultado">Normal</span>
+                        </div>
+                        <div class="descricao-resultado">Baço com dimensões normais e ecotextura homogênea.</div>
+                    </div>
+                </div>
+                
+                <div class="interpretacao-exame">
+                    <h4>Conclusão do Laudo:</h4>
+                    <p>Ultrassom abdominal dentro da normalidade, exceto pela presença de cisto simples no rim direito, de características benignas, não necessitando de intervenção. Recomendado acompanhamento anual.</p>
+                </div>
+                
+                <div class="acoes-exame">
+                    <button class="botao-ver" onclick="verResultadoCompleto('ultrassom')">Ver Laudo Completo</button>
+                    <button class="botao-download">Download PDF</button>
+                    <button class="botao-compartilhar">Compartilhar</button>
+                </div>
+            </div>
+
+            
+            <div class="cartao-exame">
+                <div class="cabecalho-exame">
+                    <h3>Eletrocardiograma (ECG)</h3>
+                    <span class="status-exame agendado">Agendado</span>
+                </div>
+                <div class="informacao-exame">
+                    <p><strong>Data Agendada:</strong> 20/04/2024</p>
+                    <p><strong>Horário:</strong> 14:30</p>
+                    <p><strong>Local:</strong> Clínica Cardiológica Vida+</p>
+                    <p><strong>Endereço:</strong> Av. Paulista, 1000 - São Paulo/SP</p>
+                </div>
+                
+                <div class="instrucoes-exame">
+                    <h4>Preparação para o Exame:</h4>
+                    <ul>
+                        <li>Não utilizar cremes ou óleos no tórax no dia do exame</li>
+                        <li>Vestir roupas confortáveis e de fácil remoção</li>
+                        <li>Evitar exercícios físicos intensos 2 horas antes</li>
+                        <li>Trazer exames cardiológicos anteriores (se houver)</li>
+                    </ul>
+                </div>
+                
+                <div class="acoes-exame">
+                    <button class="botao-secundario">Reagendar Exame</button>
+                    <button class="botao-cancelar" onclick="cancelarExame(this)">Cancelar Exame</button>
+                </div>
+            </div>
+
+           
+            <div class="cartao-exame">
+                <div class="cabecalho-exame">
+                    <h3>Glicemia em Jejum</h3>
+                    <span class="status-exame aguardando">Em Análise</span>
+                </div>
+                <div class="informacao-exame">
+                    <p><strong>Data da Coleta:</strong> 05/04/2024</p>
+                    <p><strong>Previsão de Resultado:</strong> 18/04/2024</p>
+                    <p><strong>Laboratório:</strong> LabVida Central</p>
+                    <p><strong>Status do Processamento:</strong> Em análise bioquímica</p>
+                </div>
+                
+                <div class="progresso-exame">
+                    <h4>Andamento do Exame:</h4>
+                    <div class="etapas-progresso">
+                        <div class="etapa concluida">
+                            <span class="numero-etapa">1</span>
+                            <span class="nome-etapa">Coleta Realizada</span>
+                            <span class="data-etapa">05/04</span>
+                        </div>
+                        <div class="etapa concluida">
+                            <span class="numero-etapa">2</span>
+                            <span class="nome-etapa">Em Processamento</span>
+                            <span class="data-etapa">08/04</span>
+                        </div>
+                        <div class="etapa atual">
+                            <span class="numero-etapa">3</span>
+                            <span class="nome-etapa">Análise Bioquímica</span>
+                            <span class="data-etapa">Em andamento</span>
+                        </div>
+                        <div class="etapa">
+                            <span class="numero-etapa">4</span>
+                            <span class="nome-etapa">Laudo Médico</span>
+                            <span class="data-etapa">Previsão: 18/04</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="acoes-exame">
+                    <button class="botao-secundario" disabled>Aguardando Resultado</button>
+                    <button class="botao-cancelar" onclick="cancelarExame(this)">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modalCancelar" class="modal">
+        <div class="conteudo-modal">
+            <h3>Cancelar Exame</h3>
+            <p>Tem certeza que deseja cancelar este exame?</p>
+            <div class="acoes-modal">
+                <button class="botao-secundario" onclick="fecharModal()">Manter Exame</button>
+                <button class="botao-confirmar-cancelar" onclick="confirmarCancelamento()">Sim, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="exames.js"></script>
+</body>
+</html>
