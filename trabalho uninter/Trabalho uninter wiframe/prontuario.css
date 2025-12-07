@@ -1,0 +1,106 @@
+/* Estilos básicos do wireframe */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Caixa padrão */
+.box {
+    border: 2px dashed #999;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Elementos pequenos */
+.small {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cabeçalho da página */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cartão médico/paciente */
+.doctor-card {
+    display: flex;
+    gap: 20px;
+}
+
+/* Avatar do paciente */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área flexível */
+.flex {
+    flex: 1;
+}
+
+/* Labels do wireframe */
+.label {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.label.small {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* Botões / abas */
+.button {
+    border: 1px solid #999;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Grid flexível para inputs e abas */
+.filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Inputs do wireframe */
+.input {
+    border: 1px solid #999;
+    padding: 15px;
+    min-width: 200px;
+}
+
+.input.small {
+    width: 150px;
+}
